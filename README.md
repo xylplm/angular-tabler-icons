@@ -21,9 +21,9 @@ This package allows you to use the [Tabler Icons](https://tabler.io/icons) in yo
 _1. Install the package_
 
 ```sh
-npm install angular-tabler-icons
+npm install @luoxiao123/angular-tabler-icons
 # or
-yarn add angular-tabler-icons
+yarn add @luoxiao123/angular-tabler-icons
 ```
 
 ## Usage
@@ -36,12 +36,12 @@ If you are using Standalone Components, use the `provideTablerIcons()`
 
 ```ts
 import { Component } from '@angular/core';
-import { TablerIconComponent, provideTablerIcons } from 'angular-tabler-icons';
+import { TablerIconComponent, provideTablerIcons } from '@luoxiao123/angular-tabler-icons';
 import {
   IconNumber123,
   IconAdOff,
   IconHeartFilled,
-} from 'angular-tabler-icons/icons';
+} from '@luoxiao123/angular-tabler-icons/icons';
 
 @Component({
   selector: 'app-standalone',
@@ -125,8 +125,8 @@ Some options are available to configure the module:
 
 ```ts
 import { environment } from "../environments/environment";
-import { TablerIconsModule } from "angular-tabler-icons";
-import * as TablerIcons from "angular-tabler-icons/icons";
+import { TablerIconsModule } from "@luoxiao123/angular-tabler-icons";
+import * as TablerIcons from "@luoxiao123/angular-tabler-icons/icons";
 
 @NgModule({
   imports: [
@@ -146,8 +146,8 @@ export class IconsModule {}
 You can import all icons at once by doing the following. However, keep in mind that by doing this, all icons will end up in your application bundle. While this may not be much of an issue for prototyping, **it is not recommended for any application that you plan to release**.
 
 ```ts
-import { TablerIconsModule } from "angular-tabler-icons";
-import * as TablerIcons from "angular-tabler-icons/icons";
+import { TablerIconsModule } from "@luoxiao123/angular-tabler-icons";
+import * as TablerIcons from "@luoxiao123/angular-tabler-icons/icons";
 
 @NgModule({
   imports: [TablerIconsModule.pick(TablerIcons)],
@@ -178,8 +178,8 @@ _file: icon.module.ts_
 ```ts
 import { NgModule } from "@angular/core";
 
-import { TablerIconsModule } from "angular-tabler-icons";
-import { IconCamera, IconHeart, IconBrandGithub } from "angular-tabler-icons/icons";
+import { TablerIconsModule } from "@luoxiao123/angular-tabler-icons";
+import { IconCamera, IconHeart, IconBrandGithub } from "@luoxiao123/angular-tabler-icons/icons";
 
 // Select some icons (use an object, not an array)
 const icons = {
