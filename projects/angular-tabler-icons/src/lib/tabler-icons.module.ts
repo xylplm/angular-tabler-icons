@@ -18,7 +18,7 @@ export class TablerIconsModule {
     if (!this.options) {
       throw new Error(
         `No icon provided. Make sure to use 'TablerIconsModule.pick({ ... })' when importing the module\n` +
-          `Refer to documentation on https://github.com/pierreavn/angular-tabler-icons`
+          `Refer to documentation on https://github.com/xylplm/angular-tabler-icons`
       );
     }
   }

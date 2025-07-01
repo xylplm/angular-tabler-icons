@@ -106,7 +106,7 @@ export class TablerIconComponent {
     if (!svg && !this.#options.some((option) => option.ignoreWarnings)) {
       console.warn(
         `Tabler Icon not found: ${iconName}\n
-         Refer to documentation on https://github.com/pierreavn/angular-tabler-icons`
+         Refer to documentation on https://github.com/xylplm/angular-tabler-icons`
       );
     }
 
