@@ -17,9 +17,9 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: yarn
+        run: npm i
       - name: Build Angular library
-        run: yarn lib:build
+        run: npm run lib:build
       - name: Publish package to NPM
         working-directory: ./dist/angular-tabler-icons
         run: npm publish
