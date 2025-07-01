@@ -12,6 +12,8 @@
 
 This is based on [angular-tabler-icons](https://github.com/pierreavn/angular-tabler-icons) The main reason for FORK's project is that the original author did not have time to maintain and review the code, so they forked their own version.
 
+This project is for personal use only. If you need to contribute, please go to the original author's repository!
+
 This package allows you to use the [Tabler Icons](https://tabler.io/icons) in your angular applications. Tabler Icons is a set of free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a 2px stroke.
 
 ## Install
@@ -230,7 +232,7 @@ After importing the _IconsModule_ in your feature or shared module, use the icon
 
 | Angular | angular-tabler-icons |
 | ------- | -------------------- |
-| 18 & 19 | 3.22.0+              |
+| 18-20   | 3.22.0+              |
 | 17      | 2.40.1+              |
 | 16      | 2.21.1+              |
 | 15      | 1.117.1+             |

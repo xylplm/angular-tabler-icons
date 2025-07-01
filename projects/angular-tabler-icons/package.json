@@ -1,10 +1,10 @@
 {
-  "name": "angular-tabler-icons",
+  "name": "@luoxiao123/angular-tabler-icons",
   "version": "3.34.0",
   "description": "Tabler Icons components library for your Angular applications",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pierreavn/angular-tabler-icons.git"
+    "url": "git+https://github.com/xylplm/angular-tabler-icons.git"
   },
   "keywords": [
     "angular",
@@ -16,12 +16,12 @@
     "components",
     "library"
   ],
-  "author": "Pierre Avinain",
+  "author": "xylplm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pierreavn/angular-tabler-icons/issues"
+    "url": "https://github.com/xylplm/angular-tabler-icons/issues"
   },
-  "homepage": "https://github.com/pierreavn/angular-tabler-icons",
+  "homepage": "https://github.com/xylplm/angular-tabler-icons",
   "peerDependencies": {
     "@angular/common": "17 - 20",
     "@angular/core": "17 - 20"
