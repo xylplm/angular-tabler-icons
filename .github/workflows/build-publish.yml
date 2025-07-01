@@ -22,6 +22,6 @@ jobs:
         run: npm run lib:build
       - name: Publish package to NPM
         working-directory: ./dist/angular-tabler-icons
-        run: npm publish
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
