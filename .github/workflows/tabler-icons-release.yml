@@ -42,4 +42,4 @@ jobs:
           commit-message: "Tabler Icons v${{ github.event.inputs.tabler_version }}"
           branch: "release/${{ github.event.inputs.tabler_version }}"
           delete-branch: true
-          reviewers: "pierreavn"
+          reviewers: "xylplm"
