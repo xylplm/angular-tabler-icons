@@ -2705,10 +2705,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.2.tgz#821f8442f4175d8f0467b9daf26e3a18e2d02af2"
   integrity sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==
 
-"@tabler/icons@3.28.0":
-  version "3.28.0"
-  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-3.28.0.tgz#9a10a3eaab83050b697e44b6cf36c51e589c5345"
-  integrity sha512-qLHCJsrMOqvxXG5rwlKxbbZ6HVBEzQQKpt4iVXQ00LbcgYek/tXfrqQiJ3wFGengfBvFZAPlSKYuifTPGiXRSw==
+"@tabler/icons@3.28.1":
+  version "3.28.1"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-3.28.1.tgz#271e6d4107525dbb8622a36a9414487e734606aa"
+  integrity sha512-h7nqKEvFooLtFxhMOC1/2eiV+KRXhBUuDUUJrJlt6Ft6tuMw2eU/9GLQgrTk41DNmIEzp/LI83K9J9UUU8YBYQ==
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.11"
