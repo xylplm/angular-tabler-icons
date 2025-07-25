@@ -717,6 +717,7 @@ export { IconBrandDoctrine } from './svg/brand-doctrine';
 export { IconBrandDolbyDigital } from './svg/brand-dolby-digital';
 export { IconBrandDouban } from './svg/brand-douban';
 export { IconBrandDribbble } from './svg/brand-dribbble';
+export { IconBrandDropbox } from './svg/brand-dropbox';
 export { IconBrandDrops } from './svg/brand-drops';
 export { IconBrandDrupal } from './svg/brand-drupal';
 export { IconBrandEdge } from './svg/brand-edge';
