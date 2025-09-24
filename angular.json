@@ -43,7 +43,7 @@
               "projects/angular-tabler-icons/**/*.ts",
               "projects/angular-tabler-icons/**/*.html"
             ],
-            "eslintConfig": "projects/angular-tabler-icons/eslint.config.cjs"
+            "eslintConfig": "projects/angular-tabler-icons/eslint.config.js"
           }
         }
       }
@@ -124,7 +124,7 @@
               "src/**/*.ts",
               "src/**/*.html"
             ],
-            "eslintConfig": "eslint.config.cjs"
+            "eslintConfig": "eslint.config.js"
           }
         }
       }
