@@ -22,8 +22,6 @@ _1. Install the package_
 
 ```sh
 npm install @luoxiao123/angular-tabler-icons
-# or
-yarn add @luoxiao123/angular-tabler-icons
 ```
 
 ## Usage
@@ -248,8 +246,8 @@ Feel free to report issues or to contribute to this project!
 Here are few tips to start:
 
 ```bash
-yarn lib:generate  # generate components from Tabler Icons
-yarn lib:build  # build angular library
+npm run lib:generate  # generate components from Tabler Icons
+npm run lib:build  # build angular library
 ```
 
 ## How to rebuild for newer tabler icons version
