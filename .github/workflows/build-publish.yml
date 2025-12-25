@@ -25,6 +25,9 @@ jobs:
           # 可选但推荐：指定生成者的ID（你的GitHub用户名/组织）
           generate-release-notes: false
 
+      - name: Update npm to latest version for OIDC support
+        run: npm install -g npm@latest
+
       - name: Install dependencies
         run: npm ci
 
