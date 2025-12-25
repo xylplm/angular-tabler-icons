@@ -20,16 +20,17 @@ jobs:
         with:
           node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
+          # 启用来源证明和OIDC身份
+          provenance: true
+          # 可选但推荐：指定生成者的ID（你的GitHub用户名/组织）
+          generate-release-notes: false
+
       - name: Install dependencies
         run: npm ci
+
       - name: Build Angular library
         run: npm run lib:build
-      - name: Debug OIDC token
-        run: |
-          echo "Node version: $(node --version)"
-          echo "npm version: $(npm --version)"
-          echo "Registry URL: $(npm config get registry)"
-          echo "Auth token present: $(if [ -n "${{ secrets.GITHUB_TOKEN }}" ]; then echo 'Yes'; else echo 'No'; fi)"
+
       - name: Publish package to NPM with OIDC
         working-directory: ./dist/angular-tabler-icons
         run: npm publish --access public
