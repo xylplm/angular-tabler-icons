@@ -9,10 +9,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # 用于 OIDC 令牌生成
     steps:
       - uses: actions/checkout@v2
       # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
@@ -20,8 +22,8 @@ jobs:
         run: npm ci
       - name: Build Angular library
         run: npm run lib:build
-      - name: Publish package to NPM
+      - name: Publish package to NPM with OIDC
         working-directory: ./dist/angular-tabler-icons
-        run: npm publish --access public
+        run: npm publish --access public --provenance
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
