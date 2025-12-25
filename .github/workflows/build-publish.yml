@@ -14,10 +14,10 @@ jobs:
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v2
         with:
-          node-version: '20.x'
+          node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: npm i
+        run: npm ci
       - name: Build Angular library
         run: npm run lib:build
       - name: Publish package to NPM
