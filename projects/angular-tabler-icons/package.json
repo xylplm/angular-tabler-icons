@@ -1,6 +1,6 @@
 {
   "name": "@luoxiao123/angular-tabler-icons",
-  "version": "3.35.1",
+  "version": "3.35.2",
   "description": "Tabler Icons components library for your Angular applications",
   "type": "module",
   "repository": {
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/xylplm/angular-tabler-icons",
   "peerDependencies": {
-    "@angular/common": "17 - 20",
-    "@angular/core": "17 - 20"
+    "@angular/common": "20 - 21",
+    "@angular/core": "20 - 21"
   },
   "dependencies": {
     "tslib": "^2.8.1"

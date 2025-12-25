@@ -1,6 +1,6 @@
 {
   "name": "workspace",
-  "version": "3.35.1",
+  "version": "3.35.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

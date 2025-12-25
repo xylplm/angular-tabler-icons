@@ -230,7 +230,7 @@ After importing the _IconsModule_ in your feature or shared module, use the icon
 
 | Angular | angular-tabler-icons |
 | ------- | -------------------- |
-| 21      | 3.35.1+              |
+| 21      | 3.35.2+              |
 | 18-20   | 3.22.0+              |
 | 17      | 2.40.1+              |
 | 16      | 2.21.1+              |
