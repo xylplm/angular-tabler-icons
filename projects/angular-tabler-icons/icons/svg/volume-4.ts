@@ -1,0 +1,1 @@
+export const IconVolume4 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>  <g transform="translate(1.5, 0)">  <path d="M8 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />  </g></svg>`
