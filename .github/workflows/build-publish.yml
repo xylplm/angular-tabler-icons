@@ -6,13 +6,15 @@ on:
     tags:
       - '*'
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write  # 用于 OIDC 令牌生成
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
         with:
@@ -24,6 +26,4 @@ jobs:
         run: npm run lib:build
       - name: Publish package to NPM with OIDC
         working-directory: ./dist/angular-tabler-icons
-        run: npm publish --access public --provenance
-        env:
-          NPM_CONFIG_PROVENANCE: true
+        run: npm publish --access public
