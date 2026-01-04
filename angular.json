@@ -68,7 +68,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/assets",
-              "src/favicon.svg"
+              "src/favicon.svg",
+              "src/404.html"
             ],
             "styles": [
               "src/styles.scss"
