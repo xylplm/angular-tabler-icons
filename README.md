@@ -30,6 +30,11 @@ This is a fork of [angular-tabler-icons](https://github.com/pierreavn/angular-ta
 
 This package allows you to use the [Tabler Icons](https://tabler.io/icons) in your Angular applications. Tabler Icons is a set of free MIT-licensed, high-quality SVG icons for use in web projects. Each icon is designed on a 24x24 grid with a 2px stroke.
 
+**Quick Links:**
+- 📦 [NPM Package](https://www.npmjs.com/package/@luoxiao123/angular-tabler-icons)
+- 🎨 [Live Demo](https://xylplm.github.io/angular-tabler-icons/)
+- 📖 [Icon Library](https://tabler.io/icons)
+
 **Features:**
 - 🎨 5000+ high-quality SVG icons
 - 📦 Tree-shakeable - import only what you use
