@@ -1,43 +1,44 @@
-<h1>Tabler Icons Sample App</h1>
+<div class="app-container">
+  <!-- 顶部导航 -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo-section">
+        <i-tabler name="palette" class="logo-icon"></i-tabler>
+        <h1>{{ 'home.title' | translate }}</h1>
+      </div>
+      <nav class="nav-menu">
+        @for (page of navPages; track $index) {
+          <a 
+            [routerLink]="['/', page]"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: page === 'home' ? true : false }"
+            class="nav-btn">
+            {{ ('nav.' + page) | translate }}
+          </a>
+        }
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" (click)="toggleLanguage()">
+          <i-tabler name="world"></i-tabler>
+          {{ currentLanguage === 'en' ? '中文' : 'EN' }}
+        </button>
+        <a href="https://github.com/xylplm/angular-tabler-icons" target="_blank" class="btn btn-secondary">
+          <i-tabler name="brand-github"></i-tabler>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
 
-<fieldset>
-  <legend>camera</legend>
-  <i-tabler name="camera"></i-tabler>
-</fieldset>
+  <!-- 主要内容 -->
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
 
-<fieldset>
-  <legend>camera-filled</legend>
-  <i-tabler name="camera-filled"></i-tabler>
-</fieldset>
-
-<fieldset>
-  <legend>camera (style, big)</legend>
-  <i-tabler name="camera" style="height: 60px; width: 60px"></i-tabler>
-</fieldset>
-
-<fieldset>
-  <legend>heart (style, red)</legend>
-  <i-tabler name="heart" style="color: red"></i-tabler>
-</fieldset>
-
-<fieldset>
-  <legend>heart (style, fill red)</legend>
-  <i-tabler name="heart" style="fill: red"></i-tabler>
-</fieldset>
-
-<fieldset>
-  <legend>heart-filled (style, red)</legend>
-  <i-tabler name="heart-filled" style="color: red"></i-tabler>
-</fieldset>
-
-<fieldset>
-  <legend>heart (style, thin)</legend>
-  <i-tabler name="heart" style="stroke-width: 1px"></i-tabler>
-</fieldset>
-
-<fieldset>
-  <legend>brand-github (class, blue)</legend>
-  <i-tabler name="brand-github" class="blue"></i-tabler>
-</fieldset>
-
-<app-standalone></app-standalone>
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>{{ 'footer' | translate }}</p>
+    </div>
+  </footer>
+</div>

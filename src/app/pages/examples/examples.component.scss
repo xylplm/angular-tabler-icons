@@ -1,0 +1,199 @@
+.examples-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .examples-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin: 0 0 20px 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      margin: 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  .example-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .example-icon-container {
+      color: #667eea;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0 0 15px 0;
+      font-weight: 500;
+    }
+
+    .example-code {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+      border-left: 3px solid #667eea;
+      word-break: break-all;
+
+      code {
+        font-family: 'Courier New', monospace;
+        font-size: 0.85rem;
+        color: #1a202c !important;
+        background: transparent !important;
+        display: block;
+        word-break: break-all;
+      }
+    }
+  }
+
+  .styling-examples {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin: 0 0 30px 0;
+      text-align: center;
+    }
+
+    .style-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .preview-box {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      transition: border-color 0.3s ease;
+
+      &:hover {
+        border-color: #e0e0e0;
+      }
+
+      .preview-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 25px 0;
+        text-align: center;
+      }
+
+      .style-demo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        min-height: 60px;
+
+        i-tabler {
+          color: #667eea;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .examples-section {
+    padding: 40px 20px;
+
+    .examples-header {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .examples-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .example-card {
+      padding: 20px;
+
+      .example-icon-container {
+        font-size: 42px;
+        min-height: 50px;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      .example-code {
+        code {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .styling-examples {
+      padding: 25px;
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      .style-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .preview-box {
+        padding: 20px;
+
+        .style-demo {
+          gap: 10px;
+        }
+      }
+    }
+  }
+}

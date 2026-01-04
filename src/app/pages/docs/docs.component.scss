@@ -1,0 +1,150 @@
+.docs-section {
+  padding: 60px 20px;
+  background: white;
+
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .docs-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin: 0 0 20px 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      margin: 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .doc-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .doc-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: #667eea;
+      transform: translateY(-5px);
+    }
+
+    .doc-card-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+
+      i-tabler {
+        font-size: 32px;
+        color: #667eea;
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        color: #333;
+        margin: 0;
+      }
+    }
+
+    .code-block {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 6px;
+      border-left: 3px solid #667eea;
+      overflow-x: auto;
+
+      code {
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        color: #1a202c;
+        display: block;
+        word-break: break-all;
+        white-space: pre-wrap;
+      }
+
+      pre {
+        margin: 0;
+        background: #f5f5f5 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        overflow-x: auto;
+
+        code {
+          white-space: pre;
+          color: #1a202c;
+          background: transparent !important;
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .docs-section {
+    padding: 40px 20px;
+
+    .docs-header {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .doc-cards-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .doc-card {
+      padding: 20px;
+
+      .doc-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        i-tabler {
+          font-size: 28px;
+        }
+
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+
+      .code-block {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

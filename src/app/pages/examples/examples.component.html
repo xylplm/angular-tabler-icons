@@ -1,0 +1,54 @@
+<section class="examples-section">
+  <div class="section-content">
+    <div class="examples-header">
+      <h2>{{ 'examples.title' | translate }}</h2>
+      <p>{{ 'examples.description' | translate }}</p>
+    </div>
+
+    <div class="examples-grid">
+      @for (example of iconExamples; track $index) {
+        <div class="example-card">
+          <div class="example-icon-container">
+            <i-tabler [name]="example.name"></i-tabler>
+          </div>
+          <h4>{{ getIconLabel(example) }}</h4>
+          <div class="example-code">
+            <code>{{ getCodeExample(example) }}</code>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="styling-examples">
+      <h3>{{ 'examples.styling' | translate }}</h3>
+      <div class="style-grid">
+        <div class="preview-box">
+          <div class="preview-title">{{ 'examples.sizes' | translate }}</div>
+          <div class="style-demo">
+            <i-tabler name="heart" style="width: 24px; height: 24px;"></i-tabler>
+            <i-tabler name="heart" style="width: 32px; height: 32px;"></i-tabler>
+            <i-tabler name="heart" style="width: 48px; height: 48px;"></i-tabler>
+          </div>
+        </div>
+
+        <div class="preview-box">
+          <div class="preview-title">{{ 'examples.colors' | translate }}</div>
+          <div class="style-demo">
+            <i-tabler name="star-filled" style="color: #ffc107; width: 32px; height: 32px;"></i-tabler>
+            <i-tabler name="star-filled" style="color: #e91e63; width: 32px; height: 32px;"></i-tabler>
+            <i-tabler name="star-filled" style="color: #2196f3; width: 32px; height: 32px;"></i-tabler>
+          </div>
+        </div>
+
+        <div class="preview-box">
+          <div class="preview-title">{{ 'examples.opacity' | translate }}</div>
+          <div class="style-demo">
+            <i-tabler name="alert-circle" style="opacity: 1; width: 32px; height: 32px;"></i-tabler>
+            <i-tabler name="alert-circle" style="opacity: 0.66; width: 32px; height: 32px;"></i-tabler>
+            <i-tabler name="alert-circle" style="opacity: 0.33; width: 32px; height: 32px;"></i-tabler>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

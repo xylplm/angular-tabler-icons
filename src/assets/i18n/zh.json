@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "首页",
+    "docs": "文档",
+    "examples": "示例",
+    "github": "GitHub"
+  },
+  "home": {
+    "title": "Angular Tabler Icons",
+    "subtitle": "5000+ 高质量 SVG 图标库，为 Angular 应用而设计",
+    "about": "关于",
+    "description": "一个维护良好的 Angular Tabler 图标库包装器。这是一个社区 fork，继续开发和维护。",
+    "features": {
+      "icons": {
+        "title": "5000+ 图标",
+        "desc": "全面的图标库"
+      },
+      "tree": {
+        "title": "可摇树",
+        "desc": "仅导入你使用的内容"
+      },
+      "lightweight": {
+        "title": "轻量级",
+        "desc": "性能优化"
+      },
+      "custom": {
+        "title": "可定制",
+        "desc": "使用 CSS 轻松自定义"
+      }
+    },
+    "quickStart": "快速开始",
+    "examples": "图标示例",
+    "styling": "样式示例",
+    "docs": "文档"
+  },
+  "docs": {
+    "title": "文档",
+    "installation": "安装",
+    "standalone": "Standalone 组件",
+    "ngmodule": "NgModule 设置",
+    "usage": "使用",
+    "styling": "样式化图标",
+    "attributes": "属性"
+  },
+  "examples": {
+    "title": "代码示例",
+    "description": "探索图标使用模式和样式选项",
+    "basic": "基本使用",
+    "styling": "样式",
+    "sizes": "尺寸",
+    "colors": "颜色",
+    "opacity": "透明度"
+  },
+  "footer": "由社区用 ❤️ 打造"
+}

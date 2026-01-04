@@ -1,0 +1,65 @@
+<section class="docs-section">
+  <div class="section-content">
+    <div class="docs-header">
+      <h2>{{ 'docs.title' | translate }}</h2>
+      <p>{{ 'home.description' | translate }}</p>
+    </div>
+    
+    <div class="doc-cards-grid">
+      <div class="doc-card">
+        <div class="doc-card-header">
+          <i-tabler name="download"></i-tabler>
+          <h3>{{ 'docs.installation' | translate }}</h3>
+        </div>
+        <div class="code-block">
+          <code>npm install @luoxiao123/angular-tabler-icons</code>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-card-header">
+          <i-tabler name="code"></i-tabler>
+          <h3>{{ 'docs.standalone' | translate }}</h3>
+        </div>
+        <div class="code-block">
+          <pre><code>import &#x7B; Component &#x7D; from '@angular/core';
+import &#x7B; TablerIconComponent, provideTablerIcons &#x7D; from '@luoxiao123/angular-tabler-icons';
+import &#x7B; IconCamera, IconHeart &#x7D; from '@luoxiao123/angular-tabler-icons/icons';
+
+@Component(&#x7B;
+  selector: 'app-root',
+  imports: [TablerIconComponent],
+  providers: [
+    provideTablerIcons(&#x7B;
+      IconCamera,
+      IconHeart,
+    &#x7D;),
+  ],
+  template: '&lt;i-tabler name="camera"&gt;&lt;/i-tabler&gt;',
+&#x7D;)
+export class AppComponent &#x7B;&#x7D;</code></pre>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-card-header">
+          <i-tabler name="palette"></i-tabler>
+          <h3>{{ 'docs.styling' | translate }}</h3>
+        </div>
+        <div class="code-block">
+          <pre><code>&lt;i-tabler name="heart" style="color: red; width: 40px; height: 40px;"&gt;&lt;/i-tabler&gt;
+
+/* Or with CSS classes */
+.icon-large &#x7B;
+  width: 48px;
+  height: 48px;
+&#x7D;
+
+.icon-red &#x7B;
+  color: #ff6b6b;
+&#x7D;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

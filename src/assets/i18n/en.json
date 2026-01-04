@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "docs": "Docs",
+    "examples": "Examples",
+    "github": "GitHub"
+  },
+  "home": {
+    "title": "Angular Tabler Icons",
+    "subtitle": "5000+ high-quality SVG icons for Angular applications",
+    "about": "About",
+    "description": "A well-maintained Angular wrapper for Tabler Icons. This is a community fork that continues active development and maintenance.",
+    "features": {
+      "icons": {
+        "title": "5000+ Icons",
+        "desc": "Comprehensive icon library"
+      },
+      "tree": {
+        "title": "Tree-Shakeable",
+        "desc": "Import only what you use"
+      },
+      "lightweight": {
+        "title": "Lightweight",
+        "desc": "Optimized for performance"
+      },
+      "custom": {
+        "title": "Customizable",
+        "desc": "Easy to style with CSS"
+      }
+    },
+    "quickStart": "Quick Start",
+    "examples": "Icon Examples",
+    "styling": "Styling Examples",
+    "docs": "Documentation"
+  },
+  "docs": {
+    "title": "Documentation",
+    "installation": "Installation",
+    "standalone": "Standalone Components",
+    "ngmodule": "NgModule Setup",
+    "usage": "Usage",
+    "styling": "Styling Icons",
+    "attributes": "Attributes"
+  },
+  "examples": {
+    "title": "Code Examples",
+    "description": "Explore icon usage patterns and styling options",
+    "basic": "Basic Usage",
+    "styling": "Styling",
+    "sizes": "Sizes",
+    "colors": "Colors",
+    "opacity": "Opacity"
+  },
+  "footer": "Made with ❤️ by the community"
+}

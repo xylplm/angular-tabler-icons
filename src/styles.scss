@@ -1,1 +1,295 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ========== CSS 变量系统 ========== */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --accent-color: #ffd700;
+  --text-dark: #333;
+  --text-light: #666;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 15px 40px rgba(102, 126, 234, 0.15);
+}
+
+/* ========== Tabler Icons 样式 ========== */
+i-tabler {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  stroke-width: 2;
+}
+
+/* 图标颜色类 */
+.icon-red {
+  color: #ff6b6b;
+}
+
+.icon-blue {
+  color: #4c6ef5;
+}
+
+.icon-green {
+  color: #51cf66;
+}
+
+.icon-yellow {
+  color: #ffd93d;
+}
+
+.icon-primary {
+  color: var(--primary-color);
+}
+
+.icon-secondary {
+  color: var(--secondary-color);
+}
+
+/* ========== 公共 Section 基础样式 ========== */
+.section {
+  padding: 80px 20px;
+  
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0 0 60px 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* ========== 通用文本样式 ========== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ========== 按钮样式 ========== */
+.btn, button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* ========== 卡片样式 ========== */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+  }
+}
+
+/* ========== 网格布局 ========== */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+
+  &.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  &.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  &.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* ========== 代码块样式 ========== */
+code {
+  font-family: 'Monaco', 'Courier New', monospace;
+  background: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  color: #d63384;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+
+  code {
+    background: none;
+    color: #f8f8f2;
+    padding: 0;
+  }
+}
+
+/* ========== 动画关键帧 ========== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ========== 工具类 ========== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* ========== 响应式媒体查询 ========== */
+@media (max-width: 768px) {
+  :root {
+    --text-base: 1rem;
+  }
+
+  .section {
+    padding: 40px 20px;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+
+  .grid {
+    &.grid-2,
+    &.grid-3,
+    &.grid-4 {
+      grid-template-columns: 1fr;
+    }
+  }
+}

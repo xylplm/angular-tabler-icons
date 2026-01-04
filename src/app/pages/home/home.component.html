@@ -1,0 +1,103 @@
+<!-- 项目介绍 -->
+<section class="intro-section">
+  <div class="section-content">
+    <div class="intro-hero">
+      <h2>{{ 'home.title' | translate }}</h2>
+      <p class="hero-subtitle">{{ 'home.subtitle' | translate }}</p>
+    </div>
+    <div class="intro-text">
+      <h3>{{ 'home.about' | translate }}</h3>
+      <p>{{ 'home.description' | translate }}</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i-tabler name="packages"></i-tabler>
+        </div>
+        <h3>{{ 'home.features.icons.title' | translate }}</h3>
+        <p>{{ 'home.features.icons.desc' | translate }}</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i-tabler name="package"></i-tabler>
+        </div>
+        <h3>{{ 'home.features.tree.title' | translate }}</h3>
+        <p>{{ 'home.features.tree.desc' | translate }}</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i-tabler name="flask"></i-tabler>
+        </div>
+        <h3>{{ 'home.features.lightweight.title' | translate }}</h3>
+        <p>{{ 'home.features.lightweight.desc' | translate }}</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i-tabler name="palette"></i-tabler>
+        </div>
+        <h3>{{ 'home.features.custom.title' | translate }}</h3>
+        <p>{{ 'home.features.custom.desc' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 快速开始 -->
+<section class="quick-start-section">
+  <div class="section-content">
+    <h2>{{ 'home.quickStart' | translate }}</h2>
+    <div class="code-block">
+      <code>npm install @luoxiao123/angular-tabler-icons</code>
+    </div>
+  </div>
+</section>
+
+<!-- 图标演示 -->
+<section class="demo-section">
+  <div class="section-content">
+    <h2>{{ 'home.examples' | translate }}</h2>
+    <div class="icons-grid">
+      @for (example of iconExamples; track $index) {
+        <div class="icon-item">
+          <div class="icon-display">
+            <i-tabler [name]="example.name"></i-tabler>
+          </div>
+          <p class="icon-name">{{ getIconLabel(example) }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- 样式示例 -->
+<section class="styling-section">
+  <div class="section-content">
+    <h2>{{ 'home.styling' | translate }}</h2>
+    <div class="styling-grid">
+      <div class="style-example">
+        <div class="example-box">
+          <i-tabler name="heart" class="icon-red"></i-tabler>
+        </div>
+        <p>Color (Red)</p>
+      </div>
+      <div class="style-example">
+        <div class="example-box">
+          <i-tabler name="heart" class="icon-large"></i-tabler>
+        </div>
+        <p>Large Size</p>
+      </div>
+      <div class="style-example">
+        <div class="example-box">
+          <i-tabler name="heart" class="icon-filled"></i-tabler>
+        </div>
+        <p>Fill (Blue)</p>
+      </div>
+      <div class="style-example">
+        <div class="example-box">
+          <i-tabler name="heart" class="icon-thin"></i-tabler>
+        </div>
+        <p>Thin Stroke</p>
+      </div>
+    </div>
+  </div>
+</section>
