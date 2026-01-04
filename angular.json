@@ -60,6 +60,7 @@
             "outputPath": {
               "base": "dist/sample-app"
             },
+            "baseHref": "/angular-tabler-icons/",
             "index": "src/index.html",
             "polyfills": [],
             "tsConfig": "tsconfig.json",
