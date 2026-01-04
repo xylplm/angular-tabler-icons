@@ -1,34 +1,109 @@
 # angular-tabler-icons
 
 [![tabler-icons-version](https://img.shields.io/badge/Tabler%20Icons-v3.36.1-%23206bc4?style=flat-square)](https://tabler.io/icons)
+[![npm version](https://img.shields.io/npm/v/@luoxiao123/angular-tabler-icons.svg?style=flat-square)](https://www.npmjs.com/package/@luoxiao123/angular-tabler-icons)
 [![license](https://img.shields.io/npm/l/angular-tabler-icons.svg?style=flat-square)]()
 [![downloads](https://img.shields.io/npm/dm/angular-tabler-icons?style=flat-square)]()
+[![GitHub stars](https://img.shields.io/github/stars/xylplm/angular-tabler-icons.svg?style=flat-square)](https://github.com/xylplm/angular-tabler-icons)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+## 📚 Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage Guide](#usage-guide)
+  - [Standalone Components](#standalone-components)
+  - [NgModule (Legacy)](#ngmodule-setup-legacy)
+- [Styling Icons](#styling-icons)
+- [Configuration](#configuration)
+- [Angular Version Compatibility](#angular-version-compatibility)
+- [Development & Contributing](#development--contributing)
+- [Contributors](#contributors-)
+
 ## Description
 
-This is based on [angular-tabler-icons](https://github.com/pierreavn/angular-tabler-icons) The main reason for FORK's project is that the original author did not have time to maintain and review the code, so they forked their own version.
+This is a fork of [angular-tabler-icons](https://github.com/pierreavn/angular-tabler-icons). The original project is no longer actively maintained, so this version continues development and maintenance.
 
-This package allows you to use the [Tabler Icons](https://tabler.io/icons) in your angular applications. Tabler Icons is a set of free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a 2px stroke.
+This package allows you to use the [Tabler Icons](https://tabler.io/icons) in your Angular applications. Tabler Icons is a set of free MIT-licensed, high-quality SVG icons for use in web projects. Each icon is designed on a 24x24 grid with a 2px stroke.
 
-## Install
+**Features:**
+- 🎨 5000+ high-quality SVG icons
+- 📦 Tree-shakeable - import only what you use
+- 🎯 Works with Angular 12+
+- ⚡ Lightweight and performant
+- 🎭 Easy to customize with CSS
 
-_1. Install the package_
+## Installation
+
+Install the package via npm:
 
 ```sh
 npm install @luoxiao123/angular-tabler-icons
 ```
 
-## Usage
+## Quick Start
 
-### Standalone
+### For Standalone Components (Recommended)
 
-If you are using Standalone Components, use the `provideTablerIcons()`
+```ts
+import { Component } from '@angular/core';
+import { TablerIconComponent, provideTablerIcons } from '@luoxiao123/angular-tabler-icons';
+import { IconCamera, IconHeart } from '@luoxiao123/angular-tabler-icons/icons';
 
-#### Component
+@Component({
+  selector: 'app-root',
+  imports: [TablerIconComponent],
+  providers: [
+    provideTablerIcons({
+      IconCamera,
+      IconHeart,
+    }),
+  ],
+  template: `
+    <i-tabler name="camera"></i-tabler>
+    <i-tabler name="heart" style="color: red;"></i-tabler>
+  `,
+})
+export class AppComponent {}
+```
+
+### For NgModule Projects
+
+```ts
+import { NgModule } from '@angular/core';
+import { TablerIconsModule } from '@luoxiao123/angular-tabler-icons';
+import { IconCamera, IconHeart } from '@luoxiao123/angular-tabler-icons/icons';
+
+const icons = {
+  IconCamera,
+  IconHeart,
+};
+
+@NgModule({
+  imports: [TablerIconsModule.pick(icons)],
+  exports: [TablerIconsModule],
+})
+export class IconsModule {}
+```
+
+Then use in your templates:
+
+```html
+<i-tabler name="camera"></i-tabler>
+<i-tabler name="heart" style="color: red;"></i-tabler>
+```
+
+## Usage Guide
+
+### Standalone Components
+
+If you are using Standalone Components, use the `provideTablerIcons()` function.
+
+#### Component Example
 
 ```ts
 import { Component } from '@angular/core';
@@ -42,9 +117,6 @@ import {
 @Component({
   selector: 'app-standalone',
   imports: [TablerIconComponent],
-  /**
-   * Provide the icons which you want to use in this component.
-   */
   providers: [
     provideTablerIcons({
       IconNumber123,
@@ -52,45 +124,26 @@ import {
       IconHeartFilled,
     }),
   ],
-,
+  template: `
+    <div>
+      <i-tabler name="number-123"></i-tabler>
+      <i-tabler name="number-123" style="height: 60px; width: 60px;"></i-tabler>
+      <i-tabler name="ad-off" style="color: red;"></i-tabler>
+      <i-tabler name="heart-filled" style="color: red;"></i-tabler>
+    </div>
+  `,
 })
 export class StandaloneComponent {}
 
-```
+## Available Icons
 
-#### HTML
+Browse all available icons: <https://tabler.io/icons>
 
-```html
-<fieldset>
-  <legend>123</legend>
-  <i-tabler name="number-123"></i-tabler>
-</fieldset>
+This version includes **Tabler Icons v3.36.1**. For a complete list of changes, see the [changelog](https://tabler.io/icons/changelog).
 
-<fieldset>
-  <legend>123 (style, big)</legend>
-  <i-tabler name="number-123" style="height: 60px; width: 60px;"></i-tabler>
-</fieldset>
+## Styling Icons
 
-<fieldset>
-  <legend>ad-off (style, red)</legend>
-  <i-tabler name="ad-off" style="color: red;"></i-tabler>
-</fieldset>
-
-<fieldset>
-  <legend>heart-filled (style, red)</legend>
-  <i-tabler name="heart-filled" style="color: red;"></i-tabler>
-</fieldset>
-```
-
-## Available icons
-
-List of available icons: <https://tabler.io/icons>
-
-This version includes **Tabler Icons v3.36.1**, see [changelog](https://tabler.io/icons/changelog) to know which icons are available.
-
-## Styling icons
-
-Each icon can be styled separately with CSS:
+All icons can be styled individually using CSS. Customize them with classes or inline styles:
 
 ```html
 <i-tabler name="camera" class="big fill-red stroke-blue thin"></i-tabler>
@@ -115,9 +168,17 @@ Each icon can be styled separately with CSS:
 }
 ```
 
-## Options
+**Styling Tips:**
+- Use `width` and `height` for resizing
+- Use `color` property to change stroke color
+- Use `fill` property to change fill color
+- Combine multiple classes for complex styling
 
-Some options are available to configure the module:
+## Configuration
+
+### Module Options
+
+Configure the module with optional settings:
 
 ```ts
 import { environment } from "../environments/environment";
@@ -127,9 +188,8 @@ import * as TablerIcons from "@luoxiao123/angular-tabler-icons/icons";
 @NgModule({
   imports: [
     TablerIconsModule.pick(TablerIcons, {
-      // Ignore warnings, such as "Tabler Icon not found", for example:
-      //   ignoreWarnings: environment.production,
-      ignoreWarnings: true,
+      // Suppress warnings (e.g., "Tabler Icon not found")
+      ignoreWarnings: environment.production,
     }),
   ],
   exports: [TablerIconsModule],
@@ -137,9 +197,9 @@ import * as TablerIcons from "@luoxiao123/angular-tabler-icons/icons";
 export class IconsModule {}
 ```
 
-## Pick all icons
+### Importing All Icons
 
-You can import all icons at once by doing the following. However, keep in mind that by doing this, all icons will end up in your application bundle. While this may not be much of an issue for prototyping, **it is not recommended for any application that you plan to release**.
+⚠️ **Warning:** Importing all icons will increase your bundle size significantly. This is only recommended for prototyping.
 
 ```ts
 import { TablerIconsModule } from "@luoxiao123/angular-tabler-icons";
@@ -152,113 +212,58 @@ import * as TablerIcons from "@luoxiao123/angular-tabler-icons/icons";
 export class IconsModule {}
 ```
 
-### NgModule (Legacy)
+## Angular Version Compatibility
 
-_1. Generate a module to host the icons you'll import_
+| Angular Version | Package Version |
+| :---: | :---: |
+| 21 | 3.35.2+ |
+| 18-20 | 3.22.0+ |
+| 17 | 2.40.1+ |
+| 16 | 2.21.1+ |
+| 15 | 1.117.1+ |
+| 14 | 1.72.1+ |
+| 13 | 1.53.1+ |
+| 12 | 1.41.3+ |
+| 11 | 1.41.0+ |
 
-```sh
-ng generate module icons
-```
+## Development & Contributing
 
-_2. Import assets_
+We welcome contributions! Whether it's bug reports, feature requests, or pull requests, all contributions are appreciated.
 
-You need to import:
+### Getting Started with Development
 
-- TablerIconsModule, as it contains the `<i-tabler>` component
-- The icons that you need
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run start`
 
-We put this in IconsModule for modularity. See example below:
-
-_file: icon.module.ts_
-
-```ts
-import { NgModule } from "@angular/core";
-
-import { TablerIconsModule } from "@luoxiao123/angular-tabler-icons";
-import { IconCamera, IconHeart, IconBrandGithub } from "@luoxiao123/angular-tabler-icons/icons";
-
-// Select some icons (use an object, not an array)
-const icons = {
-  IconCamera,
-  IconHeart,
-  IconBrandGithub,
-};
-
-@NgModule({
-  imports: [TablerIconsModule.pick(icons)],
-  exports: [TablerIconsModule],
-})
-export class IconsModule {}
-
-// NOTES:
-// 1. We add TablerIconsModule to the 'exports', since the <i-tabler> component will be used in templates of parent module
-// 2. Don't forget to pick some icons using TablerIconsModule.pick({ ... })
-```
-
-_3. Import IconsModule_
-
-If you are using NgModules, import it this way:
-
-```ts
-import { NgModule } from "@angular/core";
-import { MyComponent } from "./my/my.component";
-import { IconsModule } from "./icons.module";
-
-@NgModule({
-  declarations: [MyComponent],
-  imports: [
-    IconsModule, // <--- Here
-  ],
-})
-export class MyModule {}
-```
-
-_4. Use it in template_
-
-After importing the _IconsModule_ in your feature or shared module, use the icons as follows:
-
-```html
-<i-tabler name="camera"></i-tabler>
-<i-tabler name="heart" style="color: red;"></i-tabler>
-<i-tabler name="heart-filled" style="color: red;"></i-tabler>
-<i-tabler name="brand-github" class="someclass"></i-tabler>
-```
-
-## Angular version compatibility
-
-| Angular | angular-tabler-icons |
-| ------- | -------------------- |
-| 21      | 3.35.2+              |
-| 18-20   | 3.22.0+              |
-| 17      | 2.40.1+              |
-| 16      | 2.21.1+              |
-| 15      | 1.117.1+             |
-| 14      | 1.72.1+              |
-| 13      | 1.53.1+              |
-| 12      | 1.41.3+              |
-| 11      | 1.41.0+              |
-
-## Contributing
-
-Feel free to report issues or to contribute to this project!
-Here are few tips to start:
+### Common Tasks
 
 ```bash
-npm run lib:generate  # generate components from Tabler Icons
-npm run lib:build  # build angular library
+# Generate components from latest Tabler Icons
+npm run lib:generate
+
+# Build the library for production
+npm run lib:build
+
+# Run tests
+npm test
+
+# Run linter
+npm lint
 ```
 
-## How to rebuild for newer tabler icons version
+### Workflow for New Tabler Icons Versions
 
-1. Run GitHub actions workflow `Automatic PR on Tabler Icons Release`, with new Tabler Icons version (e.g. `2.40.0`). This workflow will create automatically a new Pull Request.
-2. Approve and Merge the generated Pull Request.
-3. Create a release/tag with the new Tabler Icons version.
+The update process is fully automated:
 
-Package is automatically rebuilt and published, with the GitHub actions workflow `Build and Publish package`.
+1. When a new Tabler Icons version is released, GitHub Actions automatically creates a PR
+2. Review and merge the generated Pull Request
+3. Create a release tag with the new Tabler Icons version
+4. The package is automatically built and published to npm
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people who have contributed to this project:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -279,4 +284,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. **Contributions of any kind are welcome!** For information on how to contribute, check the [Contributing guide](#development--contributing).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
