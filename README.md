@@ -10,7 +10,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[English](https://github.com/xylplm/angular-tabler-icons) | [中文](https://github.com/xylplm/angular-tabler-icons/blob/main/README.zh.md)
+[English](https://github.com/xylplm/angular-tabler-icons) | [中文](https://github.com/xylplm/angular-tabler-icons/blob/master/README.zh.md)
 
 ## 📚 Table of Contents
 
