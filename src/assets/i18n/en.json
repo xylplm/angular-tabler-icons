@@ -49,7 +49,9 @@
     "styling": "Styling",
     "sizes": "Sizes",
     "colors": "Colors",
-    "opacity": "Opacity"
+    "opacity": "Opacity",
+    "moreIcons": "Looking for more icons?",
+    "browseAll": "Browse All Icons"
   },
   "footer": "Made with ❤️ by the community"
 }

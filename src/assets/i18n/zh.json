@@ -49,7 +49,9 @@
     "styling": "样式",
     "sizes": "尺寸",
     "colors": "颜色",
-    "opacity": "透明度"
+    "opacity": "透明度",
+    "moreIcons": "寻找更多图标？",
+    "browseAll": "浏览所有图标"
   },
   "footer": "由社区用 ❤️ 打造"
 }
