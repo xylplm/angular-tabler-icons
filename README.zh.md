@@ -2,8 +2,8 @@
 
 [![tabler-icons-version](https://img.shields.io/badge/Tabler%20Icons-v3.36.1-%23206bc4?style=flat-square)](https://tabler.io/icons)
 [![npm version](https://img.shields.io/npm/v/@luoxiao123/angular-tabler-icons.svg?style=flat-square)](https://www.npmjs.com/package/@luoxiao123/angular-tabler-icons)
-[![license](https://img.shields.io/npm/l/angular-tabler-icons.svg?style=flat-square)]()
-[![downloads](https://img.shields.io/npm/dm/angular-tabler-icons?style=flat-square)]()
+[![license](https://img.shields.io/npm/l/@luoxiao123/angular-tabler-icons.svg?style=flat-square)]()
+[![downloads](https://img.shields.io/npm/dm/@luoxiao123/angular-tabler-icons?style=flat-square)]()
 [![GitHub stars](https://img.shields.io/github/stars/xylplm/angular-tabler-icons.svg?style=flat-square)](https://github.com/xylplm/angular-tabler-icons)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
