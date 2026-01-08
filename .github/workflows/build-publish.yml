@@ -8,7 +8,7 @@ on:
 
 permissions:
   id-token: write  # Required for OIDC
-  contents: read
+  contents: write  # Required for creating releases
 
 jobs:
   build:
@@ -37,3 +37,10 @@ jobs:
       - name: Publish package to NPM with OIDC
         working-directory: ./dist/angular-tabler-icons
         run: npm publish --access public
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
