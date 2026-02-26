@@ -1,6 +1,6 @@
 # angular-tabler-icons
 
-[![tabler-icons-version](https://img.shields.io/badge/Tabler%20Icons-v3.36.1-%23206bc4?style=flat-square)](https://tabler.io/icons)
+[![tabler-icons-version](https://img.shields.io/badge/Tabler%20Icons-v3.37.1-%23206bc4?style=flat-square)](https://tabler.io/icons)
 [![npm version](https://img.shields.io/npm/v/@luoxiao123/angular-tabler-icons.svg?style=flat-square)](https://www.npmjs.com/package/@luoxiao123/angular-tabler-icons)
 [![license](https://img.shields.io/npm/l/@luoxiao123/angular-tabler-icons.svg?style=flat-square)]()
 [![downloads](https://img.shields.io/npm/dm/@luoxiao123/angular-tabler-icons?style=flat-square)]()
@@ -147,7 +147,7 @@ export class StandaloneComponent {}
 
 浏览所有可用图标：<https://tabler.io/icons>
 
-此版本包含 **Tabler Icons v3.36.1**。有关完整的更改列表，请参阅 [更新日志](https://tabler.io/icons/changelog)。
+此版本包含 **Tabler Icons v3.37.1**。有关完整的更改列表，请参阅 [更新日志](https://tabler.io/icons/changelog)。
 
 ## 样式化图标
 
