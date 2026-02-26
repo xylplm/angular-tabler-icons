@@ -1,6 +1,6 @@
 # angular-tabler-icons
 
-[![tabler-icons-version](https://img.shields.io/badge/Tabler%20Icons-v3.37.0-%23206bc4?style=flat-square)](https://tabler.io/icons)
+[![tabler-icons-version](https://img.shields.io/badge/Tabler%20Icons-v3.37.1-%23206bc4?style=flat-square)](https://tabler.io/icons)
 [![npm version](https://img.shields.io/npm/v/@luoxiao123/angular-tabler-icons.svg?style=flat-square)](https://www.npmjs.com/package/@luoxiao123/angular-tabler-icons)
 [![license](https://img.shields.io/npm/l/@luoxiao123/angular-tabler-icons.svg?style=flat-square)]()
 [![downloads](https://img.shields.io/npm/dm/@luoxiao123/angular-tabler-icons?style=flat-square)]()
@@ -146,7 +146,7 @@ export class StandaloneComponent {}
 
 Browse all available icons: <https://tabler.io/icons>
 
-This version includes **Tabler Icons v3.37.0**. For a complete list of changes, see the [changelog](https://tabler.io/icons/changelog).
+This version includes **Tabler Icons v3.37.1**. For a complete list of changes, see the [changelog](https://tabler.io/icons/changelog).
 
 ## Styling Icons
 
