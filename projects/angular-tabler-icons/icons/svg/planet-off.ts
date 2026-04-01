@@ -1,1 +1,1 @@
-export const IconPlanetOff = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>  <path d="M7.042 7.059a7 7 0 0 0 9.908 9.89m1.581 -2.425a7 7 0 0 0 -9.057 -9.054" />  <path d="M3 3l18 18" /></svg>`
+export const IconPlanetOff = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >  <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M7.042 7.059a7 7 0 0 0 9.908 9.89m1.581 -2.425a7 7 0 0 0 -9.057 -9.054" />  <path d="M3 3l18 18" /></svg>`
