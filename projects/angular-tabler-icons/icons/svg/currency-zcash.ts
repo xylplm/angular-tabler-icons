@@ -1,0 +1,1 @@
+export const IconCurrencyZcash = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >  <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M7 6h10l-10 12h10" />  <path d="M12 4v2" />  <path d="M12 18v2" /></svg>`
