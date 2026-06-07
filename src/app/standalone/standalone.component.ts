@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TablerIconComponent, provideTablerIcons } from 'angular-tabler-icons';
 import {
   IconNumber123,
@@ -8,20 +8,21 @@ import {
 } from 'angular-tabler-icons/icons';
 
 @Component({
-    selector: 'app-standalone',
-    imports: [TablerIconComponent],
-    providers: [
-        /**
-         * Provide the icons which you want to use in this component.
-         */
-        provideTablerIcons({
-            IconNumber123,
-            IconAdOff,
-            IconHeartFilled,
-            IconGolfFilled,
-        }),
-    ],
-    template: `
+  selector: 'app-standalone',
+  imports: [TablerIconComponent],
+  providers: [
+    /**
+     * Provide the icons which you want to use in this component.
+     */
+    provideTablerIcons({
+      IconNumber123,
+      IconAdOff,
+      IconHeartFilled,
+      IconGolfFilled,
+    }),
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
     <h2>Standalone component sample</h2>
 
     <fieldset>
@@ -48,6 +49,6 @@ import {
       <legend>golf-filled (style, blue)</legend>
       <i-tabler name="golf-filled" style="color: blue;"></i-tabler>
     </fieldset>
-  `
+  `,
 })
 export class StandaloneComponent {}

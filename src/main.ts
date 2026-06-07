@@ -1,7 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withXhr } from '@angular/common/http';
 import { provideTablerIcons } from 'angular-tabler-icons';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -31,7 +31,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideZonelessChangeDetection(),
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(withXhr()),
     provideTablerIcons({
       IconPalette,
       IconWorld,
@@ -55,9 +55,8 @@ bootstrapApplication(AppComponent, {
       fallbackLang: 'en',
       loader: provideTranslateHttpLoader({
         prefix: './assets/i18n/',
-        suffix: '.json'
-      })
+        suffix: '.json',
+      }),
     }),
-  ]
-})
-  .catch((err) => console.error(err));
+  ],
+}).catch((err) => console.error(err));

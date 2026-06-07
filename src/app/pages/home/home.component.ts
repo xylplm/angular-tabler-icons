@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TablerIconComponent } from 'angular-tabler-icons';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -8,13 +8,14 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [TablerIconComponent, CommonModule, TranslateModule],
   templateUrl: './home.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  currentLanguage: 'en' | 'zh' = 'en';
-  
+  currentLanguage = signal<'en' | 'zh'>('en');
+
   private translate = inject(TranslateService);
-  
+
   iconExamples = [
     { name: 'camera', en: 'Camera', zh: '相机' },
     { name: 'heart', en: 'Heart', zh: '心形' },
@@ -28,12 +29,11 @@ export class HomeComponent {
 
   constructor() {
     this.translate.onLangChange.subscribe((event) => {
-      this.currentLanguage = event.lang as 'en' | 'zh';
+      this.currentLanguage.set(event.lang as 'en' | 'zh');
     });
   }
 
   getIconLabel(example: any): string {
-    return example[this.currentLanguage] || '';
+    return example[this.currentLanguage()] || '';
   }
 }
-

@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "rootDir": "./src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
@@ -15,6 +16,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "es2022",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "angular-tabler-icons": [
         "dist/angular-tabler-icons/angular-tabler-icons",
@@ -28,6 +30,12 @@
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
+    "extendedDiagnostics": {
+      "checks": {
+        "nullishCoalescingNotNullable": "suppress",
+        "optionalChainNotNullable": "suppress"
+      }
+    },
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TablerIconComponent } from 'angular-tabler-icons';
 import { TranslateModule } from '@ngx-translate/core';
@@ -8,9 +8,9 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TablerIconComponent, CommonModule, TranslateModule],
   templateUrl: './docs.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./docs.component.scss'],
 })
 export class DocsComponent {
   constructor() {}
 }
-

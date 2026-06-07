@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 
 // Test Host Component - 使用官方推荐的方式
 @Component({
-  selector: 'app-test-host',
+  selector: 'tabler-icons-test-host',
   template: `<tabler-icon [name]="iconName" class="test-icon"></tabler-icon>`,
   imports: [TablerIconComponent],
 })

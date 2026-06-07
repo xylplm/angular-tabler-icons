@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TablerIconComponent } from 'angular-tabler-icons';
 import { CommonModule } from '@angular/common';
@@ -9,17 +9,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [
-    TablerIconComponent,
-    CommonModule,
-    RouterModule,
-    TranslateModule,
-  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [TablerIconComponent, CommonModule, RouterModule, TranslateModule],
 })
 export class AppComponent {
-  currentLanguage: 'en' | 'zh' = (localStorage.getItem('lang') as 'en' | 'zh') || 'en';
+  currentLanguage = signal<'en' | 'zh'>(
+    (localStorage.getItem('lang') as 'en' | 'zh') || 'en',
+  );
   navPages = ['home', 'docs', 'examples'] as const;
-  
+
   private translate = inject(TranslateService);
 
   constructor() {
@@ -28,13 +26,13 @@ export class AppComponent {
     // 设置默认语言
     this.translate.setDefaultLang('en');
     // 使用保存的语言
-    this.translate.use(this.currentLanguage);
+    this.translate.use(this.currentLanguage());
   }
 
   toggleLanguage() {
-    this.currentLanguage = this.currentLanguage === 'en' ? 'zh' : 'en';
-    this.translate.use(this.currentLanguage);
-    localStorage.setItem('lang', this.currentLanguage);
+    this.currentLanguage.update((language) => (language === 'en' ? 'zh' : 'en'));
+    this.translate.use(this.currentLanguage());
+    localStorage.setItem('lang', this.currentLanguage());
   }
 
   getNavLabel(page: string): string {

@@ -23,7 +23,7 @@
       <div class="nav-actions">
         <button class="lang-btn" (click)="toggleLanguage()">
           <i-tabler name="world"></i-tabler>
-          {{ currentLanguage === 'en' ? '中文' : 'EN' }}
+          {{ currentLanguage() === 'en' ? '中文' : 'EN' }}
         </button>
         <a href="https://github.com/xylplm/angular-tabler-icons" target="_blank" class="btn btn-secondary">
           <i-tabler name="brand-github"></i-tabler>
