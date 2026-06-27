@@ -1,12 +1,12 @@
 import { Component, inject, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TablerIconComponent } from 'angular-tabler-icons';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TablerIconComponent, CommonModule, TranslateModule],
+  imports: [TablerIconComponent, CommonModule, TranslatePipe],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./home.component.scss'],

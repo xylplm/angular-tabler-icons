@@ -2,7 +2,7 @@ import { Component, inject, ChangeDetectionStrategy, signal } from '@angular/cor
 import { RouterModule } from '@angular/router';
 import { TablerIconComponent } from 'angular-tabler-icons';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TablerIconComponent, CommonModule, RouterModule, TranslateModule],
+  imports: [TablerIconComponent, CommonModule, RouterModule, TranslatePipe],
 })
 export class AppComponent {
   currentLanguage = signal<'en' | 'zh'>(
@@ -21,11 +21,7 @@ export class AppComponent {
   private translate = inject(TranslateService);
 
   constructor() {
-    // 添加可用语言
     this.translate.addLangs(['en', 'zh']);
-    // 设置默认语言
-    this.translate.setDefaultLang('en');
-    // 使用保存的语言
     this.translate.use(this.currentLanguage());
   }
 

@@ -1,12 +1,12 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TablerIconComponent } from 'angular-tabler-icons';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-docs',
   standalone: true,
-  imports: [TablerIconComponent, CommonModule, TranslateModule],
+  imports: [TablerIconComponent, CommonModule, TranslatePipe],
   templateUrl: './docs.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./docs.component.scss'],
