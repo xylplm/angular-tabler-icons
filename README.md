@@ -146,7 +146,7 @@ export class StandaloneComponent {}
 
 Browse all available icons: <https://tabler.io/icons>
 
-This version includes **Tabler Icons v3.44.0**. For a complete list of changes, see the [changelog](https://tabler.io/icons/changelog).
+This release is **@luoxiao123/angular-tabler-icons v3.44.2**, bundling **Tabler Icons v3.44.0**. For Tabler icon changes, see the [changelog](https://tabler.io/icons/changelog).
 
 ## Styling Icons
 
@@ -223,6 +223,7 @@ export class IconsModule {}
 
 | Angular Version | Package Version |
 | :---: | :---: |
+| 22 | 3.44.2+ |
 | 21 | 3.35.2+ |
 | 18-20 | 3.22.0+ |
 | 17 | 2.40.1+ |

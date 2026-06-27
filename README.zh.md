@@ -147,7 +147,7 @@ export class StandaloneComponent {}
 
 浏览所有可用图标：<https://tabler.io/icons>
 
-此版本包含 **Tabler Icons v3.44.0**。有关完整的更改列表，请参阅 [更新日志](https://tabler.io/icons/changelog)。
+当前发布版本为 **@luoxiao123/angular-tabler-icons v3.44.2**，内置 **Tabler Icons v3.44.0**。图标变更请参阅 [更新日志](https://tabler.io/icons/changelog)。
 
 ## 样式化图标
 
@@ -224,6 +224,7 @@ export class IconsModule {}
 
 | Angular 版本 | 包版本 |
 | :---: | :---: |
+| 22 | 3.44.2+ |
 | 21 | 3.35.2+ |
 | 18-20 | 3.22.0+ |
 | 17 | 2.40.1+ |
